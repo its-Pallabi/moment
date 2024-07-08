@@ -22,7 +22,7 @@ class AnomalyDetectionDataset:
         """
 
         self.full_file_path_and_name = (
-            "./data/198_UCR_Anomaly_tiltAPB2_50000_124159_124985.out"
+            "moment/data/198_UCR_Anomaly_tiltAPB2_50000_124159_124985.out"
         )
         self.series = "198_UCR_Anomaly_tiltAPB2_50000_124159_124985"
         self.data_split = data_split
