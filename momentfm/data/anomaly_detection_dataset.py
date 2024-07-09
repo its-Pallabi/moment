@@ -22,9 +22,9 @@ class AnomalyDetectionDataset:
         """
 
         self.full_file_path_and_name = (
-            "moment/data/198_UCR_Anomaly_tiltAPB2_50000_124159_124985.out"
+            "moment/data/parsed_data2.csv"
         )
-        self.series = "198_UCR_Anomaly_tiltAPB2_50000_124159_124985"
+        self.series = "parsed_data2.csv"
         self.data_split = data_split
         self.data_stride_len = data_stride_len
         self.random_seed = random_seed
