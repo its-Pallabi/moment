@@ -33,7 +33,7 @@ class InformerDataset:
 
         self.seq_len = 512
         self.forecast_horizon = forecast_horizon
-        self.full_file_path_and_name = "../data/ETTh1.csv"
+        self.full_file_path_and_name = "moment/data/ETTh1.csv"
         self.data_split = data_split
         self.data_stride_len = data_stride_len
         self.task_name = task_name
