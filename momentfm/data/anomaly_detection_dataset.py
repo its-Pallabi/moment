@@ -22,9 +22,9 @@ class AnomalyDetectionDataset:
         """
 
         self.full_file_path_and_name = (
-            "moment/data/parsed_data2.csv"
+            "moment/data/tourism_monthly_dataset1.tsf"
         )
-        self.series = "parsed_data2.csv"
+        self.series = "tourism_monthly_dataset1.tsf"
         self.data_split = data_split
         self.data_stride_len = data_stride_len
         self.random_seed = random_seed
