@@ -41,8 +41,7 @@ class AnomalyDetectionDataset:
         self._read_data()
 
     def _get_borders(self):
-        details = self.series.split("_")
-        n_train = int(details[4])
+        n_train = 200
         train_end = n_train
         test_start = train_end
 
