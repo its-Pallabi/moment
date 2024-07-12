@@ -554,6 +554,9 @@ class MOMENT(nn.Module):
             input_mask = torch.ones_like(x_enc[:, 0, :])
 
         if self.task_name == TASKS.RECONSTRUCTION:
+            print("Shape of x_enc:", x_enc.shape)
+            print("Shape of mask:", mask.shape)
+            print("Shape of input_mask:", input_mask.shape)
             return self.reconstruction(
                 x_enc=x_enc, mask=mask, input_mask=input_mask, **kwargs
             )
