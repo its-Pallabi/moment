@@ -7,7 +7,7 @@ class AnomalyDetectionDataset:
     def __init__(
         self,
         data_split: str = "train",
-        data_stride_len: int =128,
+        data_stride_len: int =34,
         random_seed: int = 42,
     ):
         """
@@ -22,13 +22,13 @@ class AnomalyDetectionDataset:
         """
 
         self.full_file_path_and_name = (
-            "moment/data/1_electricity_daily_dataset_128_321.csv"
+            "moment/data/1_electricity_india_dataset_302_504.csv"
         )
-        self.series = "1_electricity_daily_dataset_128_321.csv"
+        self.series = "1_electricity_india_dataset_302_504.csv"
         self.data_split = data_split
         self.data_stride_len = data_stride_len
         self.random_seed = random_seed
-        self.seq_len = 128
+        self.seq_len = 34
 
         # Downsampling for experiments. Refer
         # https://github.com/mononitogoswami/tsad-model-selection for more details
