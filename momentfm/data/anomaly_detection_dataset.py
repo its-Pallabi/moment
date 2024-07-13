@@ -22,9 +22,9 @@ class AnomalyDetectionDataset:
         """
 
         self.full_file_path_and_name = (
-            "moment/data/1_electricity_weekly_dataset_302_504.csv"
+            "moment/data/1_electricity_daily_dataset_128_321.csv"
         )
-        self.series = "1_electricity_weekly_dataset_302_504.csv"
+        self.series = "1_electricity_daily_dataset_128_321.csv"
         self.data_split = data_split
         self.data_stride_len = data_stride_len
         self.random_seed = random_seed
