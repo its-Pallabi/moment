@@ -38,11 +38,9 @@ class ClassificationDataset:
     def _read_data(self):
         self.scaler = StandardScaler()
 
-        self.train_data, self.train_labels = load_from_csvfile(
-            self.train_file_path_and_name
+        self.train_data, self.train_labels =pd.read_csv(self.full_file_path_and_name)
         )
-        self.test_data, self.test_labels = load_from_csvfile(
-            self.test_file_path_and_name
+        self.test_data, self.test_labels = pd.read_csv(self.full_file_path_and_name)
         )
 
         self.train_labels, self.test_labels = self._transform_labels(
