@@ -78,7 +78,7 @@ class ClassificationHead(nn.Module):
 
 class ForecastingHead(nn.Module):
     def __init__(
-        self, head_nf: int = 768 * 4, forecast_horizon: int = 96, head_dropout: int = 0
+        self, head_nf: int = 768 * 64, forecast_horizon: int = 96, head_dropout: int = 0
     ):
         super().__init__()
         self.flatten = nn.Flatten(start_dim=-2)
