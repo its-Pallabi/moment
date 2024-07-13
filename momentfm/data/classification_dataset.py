@@ -39,9 +39,9 @@ class ClassificationDataset:
         self.scaler = StandardScaler()
 
         self.train_data, self.train_labels =pd.read_csv(self.full_file_path_and_name)
-        )
+        
         self.test_data, self.test_labels = pd.read_csv(self.full_file_path_and_name)
-        )
+        
 
         self.train_labels, self.test_labels = self._transform_labels(
             self.train_labels, self.test_labels
