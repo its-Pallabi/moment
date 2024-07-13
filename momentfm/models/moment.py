@@ -33,7 +33,7 @@ class PretrainHead(nn.Module):
     def __init__(
         self,
         d_model: int = 768,
-        patch_len: int = 4,
+        patch_len: int = 8,
         head_dropout: float = 0.1,
         orth_gain: float = 1.41,
     ):
