@@ -31,7 +31,7 @@ class InformerDataset:
             Random seed for reproducibility.
         """
 
-        self.seq_len = 90
+        self.seq_len = 30
         self.forecast_horizon = forecast_horizon
         self.full_file_path_and_name = "moment/data/dataset_tk.csv"
         self.data_split = data_split
