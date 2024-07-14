@@ -8,7 +8,7 @@ from sklearn.preprocessing import StandardScaler
 class InformerDataset:
     def __init__(
         self,
-        forecast_horizon: Optional[int] = 192,
+        forecast_horizon: Optional[int] = 30,
         data_split: str = "train",
         data_stride_len: int = 1,
         task_name: str = "forecasting",
@@ -31,7 +31,7 @@ class InformerDataset:
             Random seed for reproducibility.
         """
 
-        self.seq_len = 412
+        self.seq_len = 125
         self.forecast_horizon = forecast_horizon
         self.full_file_path_and_name = "moment/data/dataset_tk.csv"
         self.data_split = data_split
