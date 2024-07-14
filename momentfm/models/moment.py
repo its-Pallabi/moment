@@ -574,6 +574,11 @@ class MOMENTPipeline(MOMENT, PyTorchModelHubMixin):
             "task_name", TASKS.RECONSTRUCTION
         )
         super().__init__(config, **kwargs)
+        self.flatten = nn.Flatten(start_dim=1)
+        # Calculate the correct input dimension for the linear layer
+        input_dim = d_model * n_vars  
+        self.linear = nn.Linear(input_dim, forecast_horizon)
+        self.dropout = nn.Dropout(dropout)
 
     def _validate_model_kwargs(self, **kwargs: dict) -> None:
         kwargs = deepcopy(kwargs)
