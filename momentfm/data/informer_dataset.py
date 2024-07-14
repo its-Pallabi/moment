@@ -31,7 +31,7 @@ class InformerDataset:
             Random seed for reproducibility.
         """
 
-        self.seq_len = 125
+        self.seq_len = 90
         self.forecast_horizon = forecast_horizon
         self.full_file_path_and_name = "moment/data/dataset_tk.csv"
         self.data_split = data_split
@@ -44,8 +44,8 @@ class InformerDataset:
 
     def _get_borders(self):
         n_train = 12 * 30 
-        n_val = 4 * 30 
-        n_test = 4 * 30 
+        n_val = 3 * 30 
+        n_test = 3 * 30 
 
         train_end = n_train
         val_end = n_train + n_val
