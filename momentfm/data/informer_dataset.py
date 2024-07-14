@@ -43,7 +43,7 @@ class InformerDataset:
         self._read_data()
 
     def _get_borders(self):
-         n_train = int(0.6 * 504)  # 60% of 504
+        n_train = int(0.6 * 504)  # 60% of 504
         n_val = int(0.2 * 504)  # 20% of 504
         n_test = int(0.2 * 504)  # 20% of 504
 
