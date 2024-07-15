@@ -38,10 +38,14 @@ class ClassificationDataset:
     def _read_data(self):
         self.scaler = StandardScaler()
 
-        self.train_data, self.train_labels =pd.read_csv(self.train_file_path_and_name)
+        train_df = pd.read_csv(self.train_file_path_and_name)  
+
+        # NOW you can extract data and labels
         self.train_data = train_df.iloc[:, :-1]  # Select all columns except the last one as data
-        self.train_labels = train_df.iloc[:, -1]
-        self.test_data, self.test_labels = pd.read_csv(self.test_file_path_and_name)
+        self.train_labels = train_df.iloc[:, -1]   # Select the last column as labels
+
+        # Do the same for the test data
+        test_df = pd.read_csv(self.test_file_path_and_name)
         self.test_data = test_df.iloc[:, :-1]
         self.test_labels = test_df.iloc[:, -1]
 
