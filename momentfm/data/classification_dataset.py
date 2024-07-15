@@ -60,11 +60,10 @@ class ClassificationDataset:
             self.data = self.test_data
             self.labels = self.test_labels
 
+        print("Shape of self.data:", self.data.shape) # Add this line for debugging
         self.num_timeseries = self.data.shape[0]
         self.len_timeseries = self.data.shape[2]
-        self.num_timeseries = self.data.shape[0]#my change
-        print("Shape of self.data:", self.data.shape)  # Add this line for debugging
-        self.len_timeseries = self.data.shape[2]#my change
+
         self.data = self.data.reshape(-1, self.len_timeseries)
         self.scaler.fit(self.data)
         self.data = self.scaler.transform(self.data)
