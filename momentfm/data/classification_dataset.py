@@ -39,9 +39,11 @@ class ClassificationDataset:
         self.scaler = StandardScaler()
 
         self.train_data, self.train_labels =pd.read_csv(self.train_file_path_and_name)
-        
+        self.train_data = train_df.iloc[:, :-1]  # Select all columns except the last one as data
+        self.train_labels = train_df.iloc[:, -1]
         self.test_data, self.test_labels = pd.read_csv(self.test_file_path_and_name)
-        
+        self.test_data = test_df.iloc[:, :-1]
+        self.test_labels = test_df.iloc[:, -1]
 
         self.train_labels, self.test_labels = self._transform_labels(
             self.train_labels, self.test_labels
