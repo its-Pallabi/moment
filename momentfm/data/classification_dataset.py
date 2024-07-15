@@ -64,7 +64,7 @@ class ClassificationDataset:
         self.num_timeseries = self.data.shape[0]
         self.len_timeseries = self.data.shape[1]
 
-        self.data = self.data.reshape(-1, self.len_timeseries)
+        self.data = self.data.values.reshape(-1, self.len_timeseries)
         self.scaler.fit(self.data)
         self.data = self.scaler.transform(self.data)
         self.data = self.data.reshape(self.num_timeseries, self.len_timeseries)
