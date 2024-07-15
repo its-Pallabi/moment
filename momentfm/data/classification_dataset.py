@@ -14,8 +14,8 @@ class ClassificationDataset:
         """
 
         self.seq_len = 512
-        self.train_file_path_and_name = "moment/data/train.csv"
-        self.test_file_path_and_name = "moment/data/test.csv"
+        self.train_file_path_and_name = "moment/data/EEG1_Train.csv"
+        self.test_file_path_and_name = "moment/data/EEG8999_Test.csv"
         self.data_split = data_split  # 'train' or 'test'
 
         # Read data
