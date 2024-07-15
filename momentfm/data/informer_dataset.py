@@ -8,7 +8,7 @@ from sklearn.preprocessing import StandardScaler
 class InformerDataset:
     def __init__(
         self,
-        forecast_horizon: Optional[int] = 30,
+        forecast_horizon: Optional[int] = 192,
         data_split: str = "train",
         data_stride_len: int = 1,
         task_name: str = "forecasting",
@@ -31,9 +31,9 @@ class InformerDataset:
             Random seed for reproducibility.
         """
 
-        self.seq_len = 30
+        self.seq_len = 512
         self.forecast_horizon = forecast_horizon
-        self.full_file_path_and_name = "moment/data/dataset_tk.csv"
+        self.full_file_path_and_name = "moment/data/Air_pollution1.csv"
         self.data_split = data_split
         self.data_stride_len = data_stride_len
         self.task_name = task_name
@@ -43,9 +43,9 @@ class InformerDataset:
         self._read_data()
 
     def _get_borders(self):
-        n_train = int(0.6 * 504)  # 60% of 504
-        n_val = int(0.2 * 504)  # 20% of 504
-        n_test = int(0.2 * 504)  # 20% of 504
+        n_train = 12 * 30 * 24
+        n_val = 4 * 30 * 24
+        n_test = 4 * 30 * 24
 
         train_end = n_train
         val_end = n_train + n_val
