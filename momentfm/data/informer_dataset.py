@@ -110,7 +110,7 @@ class InformerDataset:
         if self.task_name == "imputation":
             return (self.length_timeseries - self.seq_len) // self.data_stride_len + 1
         elif self.task_name == "forecasting":
-            print("length of timeseris",self.length_timeseries)
+            
             return (
                 self.length_timeseries - self.seq_len - self.forecast_horizon
             ) // self.data_stride_len + 1
